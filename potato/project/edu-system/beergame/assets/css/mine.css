@@ -1,0 +1,260 @@
+/* My CSS
+-------------------------------------------------- */
+/*
+  Special CSS file for Beer Game Simulation System
+  by Xiaoyu Tai
+  Create on 11 April, 2013 @beijing
+*/
+
+
+/*index*/
+.bg {
+	left: -10%;
+	position: fixed;
+	overflow: hidden;
+	text-align: center;
+}
+.bg img {
+	min-width: 1980px;
+}
+.signin{
+	text-align: center;
+	top: 20%;
+	position: absolute;
+	left: 0%;
+	width: 100%;
+	z-index: 1;
+}
+.signin-form{
+	margin: 0 auto;
+	border: 1px solid rgba(0, 0, 0, .20);
+	background-color: rgba(255, 255, 255, .80);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	width: 400px;
+}
+.signin-div{
+	margin: 20px;
+}
+.signin-div h3{
+	padding-top: 5px;
+	margin-bottom: -5px;
+	color: rgba(0, 0, 0, .60);
+}
+.signin-div hr{
+	border-top: 1px solid rgba(255, 255, 255, .20);
+	border-bottom: 1px solid rgba(0, 0, 0, .20);
+}
+.signin-div p{
+	margin-top: -10px;
+	color: rgba(0, 0, 0, .50);
+	font-size: 12px;
+}
+.signin-div input {
+	background-color: rgba(255, 255, 255, .70);
+	color: rgba(0, 0, 0, .80);;
+	border: 1px solid rgba(0, 0, 0, .20);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.signin-div input:focus {
+	border: 1px solid rgba(122, 186, 123, .80);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+}
+/*index iee*/
+#iee{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+}
+#iee-up{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 62%;
+	background-color: #333;
+	z-index: 20;
+}
+#iee-down{
+	position: absolute;
+	top: 62%;
+	left: 0px;
+	width: 100%;
+	height: 38%;
+	background-color: #CCC;
+	z-index: 20;
+}
+
+
+/*main*/
+.main-title {
+	color: rgba(0, 0, 0, .60);
+}
+.main-navback{
+	margin-top: 10px;
+	color: rgba(0, 0, 0, .60);
+}
+.main-navback:hover,
+.main-navback:focus,
+.main-navback:active {
+	color: rgba(0, 0, 0, .80);
+}
+.big-icon {
+	font-size: 130px;
+	color: rgba(102, 166, 103, .60);
+}
+.dash .highlight{
+	background-color: rgba(255, 255, 255, .40);
+	border: 1px solid rgba(122, 186, 123, .80);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #7aba7b;
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #7aba7b;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #7aba7b;
+}
+.dash .highlight:hover {
+	border: 1px solid rgba(122, 186, 123, .80);
+	background-color: rgba(255, 255, 255, .60);
+}
+.dash .highlight input {
+	background-color: rgba(255, 255, 255, .60);
+}
+.dash .highlight input:focus {
+	border: 1px solid rgba(122, 186, 123, .80);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #7aba7b;
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #7aba7b;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #7aba7b;
+}
+.dash .highlight button:active {
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #7aba7b;
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #7aba7b;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #7aba7b;
+}
+.dash {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.dash > div {
+	padding: 10px;
+	background-color: rgba(255, 255, 255, .30);
+	border: 1px solid rgba(0, 0, 0, .25);
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	height: 370px;
+}
+.dash .dash-text {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.dash p {
+	text-align: left;
+	font-size: 16px;
+	color: rgba(0, 0, 0, .80);
+}
+.dash > div:hover {
+	background-color: rgba(255, 255, 255, .50);
+	border: 1px solid rgba(0, 0, 0, .35);
+}
+.dash hr {
+	margin-top: 13px;
+	margin-bottom: 13px;
+}
+.dash-title {
+	color: rgba(0, 0, 0, .60);
+	margin-top: 5px;
+}
+.dash > div table {
+	margin-bottom: 2px;
+}
+.dash > div table td,
+.dash > div table th {
+	font-size: 18px;
+	height: 28px;
+	vertical-align: middle;
+	text-align:center;
+	color: rgba(0, 0, 0, .80);
+}
+.dash > div table > tbody > tr:nth-child(odd) > td,
+.dash > div table > tbody > tr:nth-child(odd) > th {
+	background-color: rgba(150, 150, 150, .10);
+}
+.status {
+	padding: 10px;
+	background-color: rgba(255, 255, 255, .30);
+	border: 1px solid rgba(0, 0, 0, .25);
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+}
+.status:hover {
+	background-color: rgba(255, 255, 255, .50);
+	border: 1px solid rgba(0, 0, 0, .35);
+}
+.status-title {
+	margin-left: 10px;
+	color: rgba(0, 0, 0, .60);
+	margin-top: 0px;
+}
+.status .hhr {
+	margin-top: -5px;
+	margin-bottom: 10px;
+}
+.status i{
+	font-size: 95px;
+}
+.status > div > div {
+	padding-top: 10px;
+	text-align: center;
+	height: 200px;
+}
+.status > div > div {
+	background-color: rgba(255, 255, 255, .0);
+	border: 1px solid rgba(0, 0, 0, .0);
+}
+.status > div > div:hover {
+    background-color: rgba(255, 255, 255, .30);
+    border: 1px solid rgba(0, 0, 0, .20);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.status button{
+	margin-right: 3px;
+	margin-top: 3px;
+}
+.status .mine {
+	background-color: rgba(255, 255, 255, .50);
+	border: 1px solid rgba(0, 0, 0, .35);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+.status .mine:hover {
+	background-color: rgba(255, 255, 255, .60);
+	border: 1px solid rgba(0, 0, 0, .50);
+}
+.ok-icon{
+	color: rgba(122, 186, 123, .80);
+}
+.padding-icon{
+	color: rgba(252, 200, 140, .80);
+}
+.footer{
+	margin-top: -10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	color: rgba(0, 0, 0, .50);
+}

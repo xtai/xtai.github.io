@@ -1,0 +1,55 @@
+---
+layout: default
+---
+  <header class="layout-list">
+    <div class="header-wrapper">
+      <h1><a href="{{ site.data.navigation[page.lang].project.url | prepend: site.baseurl }}">Sean Tai</a></h1>
+      <p class="header-line">
+        {{ content }}
+      </p>
+      <p class="svg-social-icons">
+        <a href="https://github.com/xtai/" target="_blank" title="GitHub - @xtai"><svg class="svg-icon github" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+          <title>GitHub - @xtai</title>
+          <path d="M1664 896q0 251-146.5 451.5t-378.5 277.5q-27 5-39.5-7t-12.5-30v-211q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 89t.5 54q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/>
+        </svg></a>
+        &nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/sean-tai/" target="_blank" title="LinkedIn - Sean Tai"><svg class="svg-icon linkedin" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+          <title>LinkedIn - Sean Tai</title>
+          <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/>
+        </svg></a>
+      </p>
+    </div>
+  </header>
+{% include nav.html %}
+  <main class="layout-list index-list" id="content">
+    <ul class="covers wide-covers">{% assign posts=site.posts | where:"lang", page.lang | where:"category", page.list %}{% for post in posts %}{% if post.front-wide != null and post.hide == null %}{% capture tags %}{% for tag in post.tags %}tag-{{ tag | downcase | url_encode | replace: "+", "_" | replace: "%2F", "" | replace: "%", "" }} {% endfor %}{% endcapture %}
+      <li class="{{tags}}cover-item cover-item-wide-duplicates" id="{{ post.url | replace: '/', '' | replace: '%', '' }}">
+        <a href="{{ post.url | prepend: site.baseurl }}">{% capture hide %}{% capture link %}{{ site.baseurl }}/potato/{{ post.category }}/{{ post.ref }}/{{ post.cover }}{% endcapture %}{% endcapture %}
+          <img src="{{ link }}" alt="{{ post.category | capitalize }}: {{ post.title }}">
+          <h2 class="title">{{ post.title }}</h2>
+          <p class="short-desc">{{ post.desc }}</p>
+        </a>
+      </li>
+      <li class="cover-item-wide">
+        <a href="{{ post.url | prepend: site.baseurl }}">{% capture hide %}{% capture link %}{{ site.baseurl }}/potato/{{ post.category }}/{{ post.ref }}/{{ post.cover-wide }}{% endcapture %}{% endcapture %}
+          <img src="{{ link }}" alt="{{ post.category | capitalize }}: {{ post.fulltitle }}">
+          <h2 class="sr-only title">{{ post.fulltitle }}</h2>
+        </a>
+      </li>{% endif %}{% endfor %}
+    </ul>
+    <div class="more-title" style="border-top: 1px solid #DAE2F2;">
+      <h2>More Projects</h2>
+    </div>
+    <ul class="tags" id="tags"></ul>
+    <ul class="covers more-covers" id="all-covers">{% assign posts=site.posts | where:"lang", page.lang | where:"category", page.list %}{% for post in posts %}{% if post.front-wide == null and post.hide == null %}{% capture tags %}{% for tag in post.tags %}tag-{{ tag | downcase | url_encode | replace: "+", "_" | replace: "%2F", "" | replace: "%", "" }} {% endfor %}{% endcapture %}
+      <li class="{{tags}}cover-item" id="{{ post.url | replace: '/', '' | replace: '%', '' }}">
+        <a href="{{ post.url | prepend: site.baseurl }}">{% capture link %}{{ site.baseurl }}/potato/{{ post.category }}/{{ post.ref }}/{{ post.cover }}{% endcapture %}
+          <img src="{{ link }}" alt="{{ post.category | capitalize }}: {{ post.title }}">
+          <h2 class="title">{{ post.title }}</h2>
+          <p class="short-desc">{{ post.desc }}</p>
+        </a>
+      </li>{% endif %}{% endfor %}
+    </ul>
+    <ul class="covers more-covers" id="selected-covers" style="display: none;"></ul>
+    <div class="gradient"></div>
+  </main>

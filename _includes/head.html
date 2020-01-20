@@ -1,0 +1,23 @@
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">{% assign desc = page.excerpt | strip_html | strip_newlines | replace: "[[", " ("  | replace: "]]", ")" %}{% capture hide %}
+    {% if page.desc %}
+      {% assign desc = page.desc %}
+    {% elsif page.fulltitle %}
+      {% assign desc = page.fulltitle %}
+    {% elsif page.category == 'photo' %}
+      {% assign desc = page.title | perpend: "Gallery of " %}
+    {% endif %}{% endcapture %}
+  <meta name="description" content="{{ desc }}">
+  <meta name="author" content="Sean Tai">
+  <title>Sean Tai - {{ page.title }}</title>
+  <link rel="shortcut icon" href="{{ site.baseurl }}/potato/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/potato/css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/potato/css/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/potato/css/style.css">{% capture multilingual %}<!-- multilingual -->{% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}{% for post in posts %}{% if post.lang != page.lang %}{% assign ml=true %}
+  <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{% endif %}{% endfor %}{% endcapture %}{% if ml %}
+  {{multilingual}}{% endif %}
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="{{ site.baseurl }}/potato/js/animation/pace.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/potato/js/animation/jquery-3.2.0.min.js"></script>

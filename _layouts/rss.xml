@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sean Tai</title>
+    <description>{{ site.data.translation[page.lang].desc | xml_escape }}</description>
+    <link>{{ site.baseurl }}/</link>
+    {% if page.lang == "en" %}<atom:link href="{{ site.baseurl }}/rss.xml" rel="self" type="application/rss+xml"/>{% else %}
+    <atom:link href="{{ site.baseurl }}/rss-{{ page.lang }}.xml" rel="self" type="application/rss+xml"/>{% endif %}
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>{% assign posts=site.posts | where:"lang", page.lang %}{% for post in posts %}{% if post.category %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <description>{% if post.desc %}{{ post.desc }}{% else %}{{ post.excerpt | strip_html | strip_newlines | replace: "[[", " ("  | replace: "]]", ")" | xml_escape }}{% endif %}</description>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <link>{{ post.url | prepend: site.baseurl }}</link>
+      <guid isPermaLink="true">{{ post.url | prepend: site.baseurl }}</guid>{% for tag in post.tags %}
+      <category>{{ tag | xml_escape }}</category>{% endfor %}{% for cat in post.categories %}
+      <category>{{ cat | xml_escape }}</category>{% endfor %}
+    </item>{% endif %}{% endfor %}
+  </channel>
+</rss>

@@ -1,0 +1,65 @@
+  <footer>
+    <p><a href="https://github.com/xtai/xtai.github.io" target="_blank"><span title="Designed and Built with Love by Sean"><i>
+      Designed and Built <!-- &lt;/&gt; --> with
+      <svg class="svg-icon heart" viewBox="0 0 32 29.6" aria-label="Love" alt="Love">
+        <title>Love</title>
+        <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+      </svg>
+      by</span> Sean</i></a>
+      <!-- Copyright 2013-2020 Xiaoyu Tai. License: https://github.com/xtai/xtai.github.io/blob/master/LICENSE.md -->
+    </p>
+  </footer>{% if page.gallery %}
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <!-- PhotoSwipe interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="{{ site.data.translation[page.lang].close }}"></button>
+          <button class="pswp__button pswp__button--share" title="{{ site.data.translation[page.lang].share }}"></button>
+          <button class="pswp__button pswp__button--fs" title="{{ site.data.translation[page.lang].fullscreen }}"></button>
+          <button class="pswp__button pswp__button--zoom" title="{{ site.data.translation[page.lang].zoom }}"></button>
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+        <button class="pswp__button pswp__button--arrow--left" title="{{ site.data.translation[page.lang].previous-arrow }}">
+        </button>
+        <button class="pswp__button pswp__button--arrow--right" title="{{ site.data.translation[page.lang].next-arrow }}">
+        </button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>{% endif %}{% if page.gallery %}
+  <!-- photo swipe styles -->
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/potato/css/photoswipe/photoswipe.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/potato/css/photoswipe/photoswipe-skin.css">{% endif %}
+  <!-- scripts -->{% if page.enable-tags %}
+  <script>
+    var tags_js = "{{ site.baseurl }}/potato/js/tags.js";
+    $.getScript(tags_js);
+  </script>{% endif %}{% if page.gallery %}
+  <script>
+    var photoswipe_js = "{{ site.baseurl }}/potato/js/photoswipe/photoswipe.min.js";
+    var photoswipe_ui_js = "{{ site.baseurl }}/potato/js/photoswipe/photoswipe-ui-xtai.js";
+    var photoswipe_init_js = "{{ site.baseurl }}/potato/js/gallery.js";
+    $.getScript(photoswipe_js);
+    $.getScript(photoswipe_ui_js);
+    $.getScript(photoswipe_init_js);
+  </script>{% endif %}

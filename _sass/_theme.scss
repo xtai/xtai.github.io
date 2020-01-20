@@ -1,0 +1,349 @@
+////////////////////////////////////
+// Cascade - _theme.scss - @xtai
+// > Theme Implementation
+////////////////////////////////////
+// Theme Implementation
+// #1 Light - Default
+body {
+  background-color: $theme-light-body-bg;
+  color: $theme-light-text;
+  a {
+    color: $theme-light-a;
+  }
+  a .svg-icon {
+    fill: $theme-light-a;
+  }
+  a:hover, a:focus {
+    color: $theme-light-a-hover;
+  }
+  :focus {
+    outline: 3px solid $theme-light-a-focus-line;
+  }
+  a:hover .svg-icon, a:focus .svg-icon {
+    fill: $theme-light-a-hover;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: $theme-light-h;
+  }
+  a.accessible-skip {
+    background-color: $theme-light-body-bg;
+    &:focus {
+      color: $theme-light-a;
+    }
+  }
+  header {
+    background-color: $theme-light-header-bg;
+    color: $theme-light-header-text;
+    h1, h2, h3, h4, h5, h6 {
+      color: $theme-light-header-h;
+    }
+    a {
+      color: $theme-light-header-a;
+    }
+    a .svg-icon {
+      fill: $theme-light-header-a;
+    }
+    a:hover, a:focus {
+      color: $theme-light-header-a-hover;
+    }
+    a:hover .svg-icon, a:focus .svg-icon {
+      fill: $theme-light-header-a-hover;
+    }
+    ul > li {
+      color: $theme-light-header-li-text;
+      a {
+        color: $theme-light-header-li-a;
+      }
+      a:hover, a:focus {
+        color: $theme-light-header-li-a-hover;
+      }
+      &:before {
+        color: $theme-light-header-li-separator;
+      }
+    }
+  }
+  nav {
+    background-color: $theme-light-nav-bg;
+    border-bottom-color: $theme-light-header-bg;
+    ul > li {
+      color: $theme-light-nav-li-text;
+      a {
+        color: $theme-light-nav-li-a;
+      }
+      a:hover, a:focus {
+        color: $theme-light-nav-li-a-hover;
+      }
+      &:before {
+        color: $theme-light-nav-li-separator;
+      }
+    }
+  }
+  main {
+    background-color: $theme-light-main-bg;
+    border-bottom-color: $theme-light-border;
+    &.index-list > div.more-title,
+    &.layout-list > ul.tags {
+      background-color: $theme-light-main-tag-bg;
+    }
+    &.index-list > div.more-title > h2 {
+      color: $theme-light-main-item-a-hover;
+    }
+    &.index-list > div.gradient {
+      background: $color-transparent; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient($theme-light-main-tag-bg, $color-transparent); /* For Safari 5.1 to 6.0 */
+      background:    -moz-linear-gradient($theme-light-main-tag-bg, $color-transparent); /* For Firefox 3.6 to 15 */
+      background:      -o-linear-gradient($theme-light-main-tag-bg, $color-transparent); /* For Opera 11.1 to 12.0 */
+      background:         linear-gradient($theme-light-main-tag-bg, $color-transparent); /* Standard syntax */
+    }
+    &.layout-list li.tag {
+      span {
+        color: $theme-light-main-tag-a;
+        border-color: $theme-light-main-tag-a-border;
+        background-color: $theme-light-main-tag-a-bg;
+      }
+      &.active span, &.active:hover span, &.active span:focus {
+        color: $theme-light-main-tag-active;
+        border-color: $theme-light-main-tag-active-border;
+        background-color: $theme-light-main-tag-active-bg;
+      }
+      &:hover span, span:hover, span:focus {
+        color: $theme-light-main-tag-a-hover;
+        border-color: $theme-light-main-tag-a-border-hover;
+        background-color: $theme-light-main-tag-a-bg-hover;
+      }
+    }
+    &.layout-list li.cover-item,
+    &.layout-list li.cover-item-wide {
+      border-color: $theme-light-main-item-border;
+      background-color: $color-gray-98;
+      a {
+        img {
+          border-color: $theme-light-main-item-border;
+        }
+        h2 {
+          color: $theme-light-main-item-a
+        }
+      }
+      a:hover, a:focus {
+        h2 {
+          color: $theme-light-main-item-a-hover;
+        }
+      }
+    }
+    @include susy-breakpoint($breakpoint-medium, $susy) {
+      &.layout-list li.cover-item:hover,
+      &.layout-list li.cover-item:focus,
+      &.layout-list li.cover-item-wide:hover,
+      &.layout-list li.cover-item-wide:focus {
+        border-color: $theme-light-main-item-border-hover;
+      }
+    }
+    &.layout-post {
+      div.my-gallery {
+        @include susy-breakpoint($breakpoint-medium, $susy) {
+          figure > a {
+            border-color: $theme-light-main-item-border;
+          }
+          figure {
+            a:hover, a:focus {
+              border-color: $theme-light-main-item-border-hover;
+            }
+          }
+        }
+      }
+      div.switcher-bar {
+        border-top-color: $theme-light-border;
+        background-color: $theme-light-main-switcher-bg;
+        a {
+          color: $theme-light-main-switcher-a;
+        }
+        a:hover, a:focus {
+          color: $theme-light-main-switcher-a-hover;
+        }
+      }
+    }
+  }
+  footer {
+    background-color: $theme-light-body-bg;
+    border-bottom-color: $theme-light-border;
+    a {
+      color: $theme-light-footer-a;
+    }
+    a .svg-icon {
+      fill: $theme-light-footer-a;
+    }
+    a:hover, a:focus {
+      color: $theme-light-footer-a-hover;
+    }
+    a:hover .svg-icon, a:focus .svg-icon {
+      fill: $theme-light-footer-a-hover;
+    }
+  }
+}
+////////////////////////////////////
+// #2 Dark
+div.dark {
+  background-color: $theme-dark-body-bg;
+  color: $theme-dark-text;
+  a {
+    color: $theme-dark-a;
+  }
+  a .svg-icon {
+    fill: $theme-dark-a;
+  }
+  a:hover, a:focus {
+    color: $theme-dark-a-hover;
+  }
+  :focus {
+    outline: 3px solid $theme-dark-a-focus-line;
+  }
+  a:hover .svg-icon, a:focus .svg-icon {
+    fill: $theme-dark-a-hover;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: $theme-dark-h;
+  }
+  a.accessible-skip {
+    background-color: $theme-dark-body-bg;
+    &:focus {
+      color: $theme-dark-a;
+    }
+  }
+  header {
+    background-color: $theme-dark-header-bg;
+    color: $theme-dark-header-text;
+    h1, h2, h3, h4, h5, h6 {
+      color: $theme-dark-header-h;
+    }
+    a {
+      color: $theme-dark-header-a;
+    }
+    a .svg-icon {
+      fill: $theme-dark-header-a;
+    }
+    a:hover, a:focus {
+      color: $theme-dark-header-a-hover;
+    }
+    a:hover .svg-icon, a:focus .svg-icon {
+      fill: $theme-dark-header-a-hover;
+    }
+    ul > li {
+      color: $theme-dark-header-li-text;
+      a {
+        color: $theme-dark-header-li-a;
+      }
+      a:hover, a:focus {
+        color: $theme-dark-header-li-a-hover;
+      }
+      &:before {
+        color: $theme-dark-header-li-separator;
+      }
+    }
+  }
+  nav {
+    background-color: $theme-dark-nav-bg;
+    border-bottom-color: $theme-dark-header-bg;
+    ul > li {
+      color: $theme-dark-nav-li-text;
+      a {
+        color: $theme-dark-nav-li-a;
+      }
+      a:hover, a:focus {
+        color: $theme-dark-nav-li-a-hover;
+      }
+      &:before {
+        color: $theme-dark-nav-li-separator;
+      }
+    }
+  }
+  main {
+    background-color: $theme-dark-main-bg;
+    border-bottom-color: $theme-dark-border;
+    &.layout-list > ul.tags {
+      background-color: $theme-dark-main-tag-bg;
+    }
+    &.layout-list li.tag {
+      span {
+        color: $theme-dark-main-tag-a;
+        border-color: $theme-dark-main-tag-a-border;
+        background-color: $theme-dark-main-tag-a-bg;
+      }
+      &.active span, &.active:hover span, &.active span:focus {
+        color: $theme-dark-main-tag-active;
+        border-color: $theme-dark-main-tag-active-border;
+        background-color: $theme-dark-main-tag-active-bg;
+      }
+      &:hover span, span:hover, span:focus {
+        color: $theme-dark-main-tag-a-hover;
+        border-color: $theme-dark-main-tag-a-border-hover;
+        background-color: $theme-dark-main-tag-a-bg-hover;
+      }
+    }
+    &.layout-list li.cover-item,
+    &.layout-list li.cover-item-wide {
+      border-color: $theme-dark-main-item-border;
+      background-color: $color-gray-98;
+      a {
+        img {
+          border-color: $theme-dark-main-item-border;
+        }
+        h2 {
+          color: $theme-dark-main-item-a
+        }
+      }
+      a:hover, a:focus {
+        h2 {
+          color: $theme-dark-main-item-a-hover;
+        }
+      }
+    }
+    @include susy-breakpoint($breakpoint-medium, $susy) {
+      &.layout-list li.cover-item:hover,
+      &.layout-list li.cover-item:focus,
+      &.layout-list li.cover-item-wide:hover,
+      &.layout-list li.cover-item-wide:focus {
+        border-color: $theme-dark-main-item-border-hover;
+      }
+    }
+    &.layout-post {
+      div.my-gallery {
+        @include susy-breakpoint($breakpoint-medium, $susy) {
+          figure > a {
+            border-color: $theme-dark-main-item-border;
+          }
+          figure {
+            a:hover, a:focus {
+              border-color: $theme-dark-main-item-border-hover;
+            }
+          }
+        }
+      }
+      div.switcher-bar {
+        border-top-color: $theme-dark-border;
+        background-color: $theme-dark-main-switcher-bg;
+        a {
+          color: $theme-dark-main-switcher-a;
+        }
+        a:hover, a:focus {
+          color: $theme-dark-main-switcher-a-hover;
+        }
+      }
+    }
+  }
+  footer {
+    background-color: $theme-dark-body-bg;
+    border-bottom-color: $theme-dark-border;
+    a {
+      color: $theme-dark-footer-a;
+    }
+    a .svg-icon {
+      fill: $theme-dark-footer-a;
+    }
+    a:hover, a:focus {
+      color: $theme-dark-footer-a-hover;
+    }
+    a:hover .svg-icon, a:focus .svg-icon {
+      fill: $theme-dark-footer-a-hover;
+    }
+  }
+}

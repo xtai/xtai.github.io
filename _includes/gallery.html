@@ -1,0 +1,8 @@
+<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">{% for image in include.g[include.i] %}{% assign desc == page.title %}{% if image[3] %}{% assign desc == image[3] %}{% endif %}
+  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="https://ww{{ image[1] }}.sinaimg.cn/large/{{ image[0] }}.jpg" itemprop="contentUrl" data-size="{{ image[2] }}" class="no-smoothState">
+      <img src="https://ww{{ image[1] }}.sinaimg.cn/mw720/{{ image[0] }}.jpg" itemprop="thumbnail" alt="{{ desc }}" />
+    </a>
+    <figcaption itemprop="caption description">{{ desc }}</figcaption>
+  </figure>{% endfor %}
+</div>

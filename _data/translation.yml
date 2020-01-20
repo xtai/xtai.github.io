@@ -1,0 +1,29 @@
+en:
+  lang: En
+  en: English
+  zh: Chinese
+  desc: Hello there, I'm Sean, and welcome to my portfolio!
+  intro:
+    project: Project
+    photo: Photography
+  close: Close (Esc)
+  share: Share
+  fullscreen: Toggle Fullscreen
+  zoom: Zoom In/Out
+  previous-arrow: Previous (arrow left)
+  next-arrow: Next (arrow right)
+
+zh:
+  lang: 中
+  en: 英文
+  zh: 中文
+  desc: 嗨，欢迎来到我的作品集网站！
+  intro: 
+    project: 作品
+    photo: 影相
+  close: 关闭 (Esc)
+  share: 分享
+  fullscreen: 打开/关闭全屏
+  zoom: 放大/缩小
+  previous-arrow: 上一张（左箭头）
+  next-arrow: 下一张（右箭头）

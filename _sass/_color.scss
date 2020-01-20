@@ -1,0 +1,139 @@
+////////////////////////////////////
+// Cascade - _color.scss - @xtai
+// > Colors
+// > Theme Configuration
+////////////////////////////////////
+// Colors
+// White Gray Black
+$color-black:        black; // #000000 rgb(  0,   0,   0)     black
+$color-gray-10:    #1A1A1A; // #1A1A1A rgb( 26,  26,  26) 10% gray
+$color-gray-20:    #333333; // #333333 rgb( 51,  51,  51) 20% gray
+$color-gray-25:    #404040; // #404040 rgb( 64,  64,  64) 25% gray
+$color-gray-41:    dimgray; // #696969 rgb(105, 105, 105) 41% gray
+$color-gray:          gray; // #808080 rgb(128, 128, 128)     gray
+$color-gray-66:   darkgray; // #A9A9A9 rgb(169, 169, 169) 66% gray
+$color-gray-80:    #CCCCCC; // #CCCCCC rgb(204, 204, 204) 80% gray
+$color-gray-86:  gainsboro; // #DCDCDC rgb(220, 220, 220) 86% gray
+$color-gray-96: whitesmoke; // #F5F5F5 rgb(245, 245, 245) 96% gray
+$color-gray-98:    #FCFCFC; // #FCFCFC rgb(250, 250, 250) 96% gray
+$color-white:        white; // #FFFFFF rgb(255, 255, 255)     white
+// Transparent
+$color-transparent-black:  rgba(0, 0, 0, 0.1);
+$color-transparent-black-2:rgba(0, 0, 0, 0.3);
+$color-transparent:        rgba(255, 255, 255, 0);
+$color-transparent-light:  rgba(246, 246, 246, 0.87);
+$color-transparent-dark:   rgba( 48,  48,  48, 0.87);
+$color-transparent-blue-4: rgba( 70, 116, 193, 0.87);
+$color-transparent-red-4:  rgba(199,  74,  50, 0.87);
+// Blue
+$color-blue-0:    rgba(218, 226, 242, 0.5); // rgb(218, 226, 242) light
+$color-blue-1:    #DAE2F2; // rgb(218, 226, 242) light
+$color-blue-2:    #B5C7E5; // rgb(181, 199, 229)
+$color-blue-3:    #8FABD9; // rgb(143, 171, 217)
+$color-blue-4-87: #5C85C8; // rgb( 92, 133, 200) black text
+$color-blue-4-5:  #527CC4; // rgb( 82, 124, 196) white text 
+$color-blue-4:    #4674C1; // rgb( 70, 116, 193) <= main
+$color-blue-5:    #315594; // rgb( 49,  85, 148)
+$color-blue-6:    #203962; // rgb( 32,  57,  98) dark
+// Red
+$color-red-0:     rgba(244, 217, 212, 0.5); // rgb(244, 217, 212) light
+$color-red-1:     #F4D9D4; // rgb(244, 217, 212) light
+$color-red-2:     #EAB4A9; // rgb(234, 180, 169)
+$color-red-3:     #E08F7E; // rgb(224, 143, 126)
+$color-red-4-87:  #CD604B; // rgb(205,  96,  75) black text
+$color-red-4-5:   #C6563F; // rgb(198,  86,  63) white text
+$color-red-4:     #C74A32; // rgb(199,  74,  50) <= main
+$color-red-5:     #943725; // rgb(148,  55,  37)
+$color-red-6:     #632418; // rgb( 99,  36,  24) dark
+// Other
+$color-blue-7:    #5D9CD3; // rgb( 93, 156, 211) blue w/ black text
+$color-yellow-1:  #FDBF2D; // rgb(253, 191,  45) yellow w/ black text
+$color-jordyblue: #8FBEF6;
+$color-tuftsblue: #3F88C5;
+$color-x:         #F46B6B;
+////////////////////////////////////
+// Theme Configuration
+// #1 Light - Default
+$theme-light-body-bg:                 $color-gray-96;
+$theme-light-text:                    $color-gray-10;
+$theme-light-a:                       $color-blue-4;
+$theme-light-a-focus-line:            $color-blue-0;
+$theme-light-a-hover:                 $color-blue-3;
+$theme-light-h:                       $color-black;
+$theme-light-header-bg:               $color-blue-4;
+$theme-light-header-text:             $color-white;
+$theme-light-header-h:                $color-white;
+$theme-light-header-a:                $color-white;
+$theme-light-header-a-hover:          $color-blue-1;
+$theme-light-header-li-text:          $color-blue-2;
+$theme-light-header-li-a:             $color-white;
+$theme-light-header-li-a-hover:       $color-blue-1;
+$theme-light-header-li-separator:     $color-blue-2;
+$theme-light-nav-bg:                  $color-transparent-blue-4;
+$theme-light-nav-li-text:             $color-white;
+$theme-light-nav-li-a:                $color-blue-2;
+$theme-light-nav-li-a-hover:          $color-blue-1;
+$theme-light-nav-li-separator:        $color-blue-2;
+$theme-light-border:                  $color-blue-2;
+$theme-light-main-bg:                 $color-white;
+$theme-light-main-tag-bg:             $color-blue-0;
+$theme-light-main-tag-active:         $color-white;
+$theme-light-main-tag-active-bg:      $color-blue-4-87;
+$theme-light-main-tag-active-border:  $color-blue-4;
+$theme-light-main-tag-a:              $color-blue-4-87;
+$theme-light-main-tag-a-hover:        $color-blue-4;
+$theme-light-main-tag-a-bg:           $color-transparent-light;
+$theme-light-main-tag-a-bg-hover:     $color-white;
+$theme-light-main-tag-a-border:       $color-blue-2;
+$theme-light-main-tag-a-border-hover: $color-blue-3;
+$theme-light-main-item-a:             $color-blue-4-87;
+$theme-light-main-item-a-hover:       $color-blue-4;
+$theme-light-main-item-border:        $color-transparent-black;
+$theme-light-main-item-border-hover:  $color-transparent-black-2;
+$theme-light-main-switcher-bg:        $color-blue-1;
+$theme-light-main-switcher-a:         $color-blue-4;
+$theme-light-main-switcher-a-hover:   $color-blue-3;
+$theme-light-footer-a:                $color-blue-4;
+$theme-light-footer-a-hover:          $color-blue-3;
+// #2 Dark - for Photo and its Posts
+$theme-dark-body-bg:                  $color-gray-96;
+$theme-dark-text:                     $color-gray-10;
+$theme-dark-a:                        $color-red-4;
+$theme-dark-a-focus-line:             $color-red-0;
+$theme-dark-a-hover:                  $color-red-3;
+$theme-dark-h:                        $color-black;
+$theme-dark-header-bg:                $color-red-4;
+$theme-dark-header-text:              $color-white;
+$theme-dark-header-h:                 $color-white;
+$theme-dark-header-a:                 $color-white;
+$theme-dark-header-a-hover:           $color-red-1;
+$theme-dark-header-li-text:           $color-red-2;
+$theme-dark-header-li-a:              $color-white;
+$theme-dark-header-li-a-hover:        $color-red-1;
+$theme-dark-header-li-separator:      $color-red-2;
+$theme-dark-nav-bg:                   $color-transparent-red-4;
+$theme-dark-nav-li-text:              $color-white;
+$theme-dark-nav-li-a:                 $color-red-2;
+$theme-dark-nav-li-a-hover:           $color-red-1;
+$theme-dark-nav-li-separator:         $color-red-2;
+$theme-dark-border:                   $color-red-2;
+$theme-dark-main-bg:                  $color-white;
+$theme-dark-main-tag-bg:              $color-red-0;
+$theme-dark-main-tag-active:          $color-white;
+$theme-dark-main-tag-active-bg:       $color-red-4-87;
+$theme-dark-main-tag-active-border:   $color-red-4;
+$theme-dark-main-tag-a:               $color-red-4-87;
+$theme-dark-main-tag-a-hover:         $color-red-4;
+$theme-dark-main-tag-a-bg:            $color-transparent-light;
+$theme-dark-main-tag-a-bg-hover:      $color-white;
+$theme-dark-main-tag-a-border:        $color-red-2;
+$theme-dark-main-tag-a-border-hover:  $color-red-3;
+$theme-dark-main-item-a:              $color-red-4-87;
+$theme-dark-main-item-a-hover:        $color-red-4;
+$theme-dark-main-item-border:         $color-transparent-black;
+$theme-dark-main-item-border-hover:   $color-transparent-black-2;//$color-red-4;
+$theme-dark-main-switcher-bg:         $color-red-1;
+$theme-dark-main-switcher-a:          $color-red-4;
+$theme-dark-main-switcher-a-hover:    $color-red-3;
+$theme-dark-footer-a:                 $color-red-4;
+$theme-dark-footer-a-hover:           $color-red-3;

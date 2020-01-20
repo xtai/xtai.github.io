@@ -1,0 +1,16 @@
+  <nav>
+    <ul class="switcher-page">{% for nav in site.data.navigation[page.lang] %}{% if nav[0] == "resume" %}
+      <li><a href="{{ site.baseurl }}{{ nav[1].url }}" target="_blank">{{ nav[1].title }}</a></li>{% elsif page.ref == nav[0] %}
+      <li class="active">{{ nav[1].title }}</li>{% else %}
+      <li><a href="{{ site.baseurl }}{{ nav[1].url }}">{{ nav[1].title }}</a></li>{% endif %}{% endfor %}
+    </ul>{% capture multilingual %}<!-- multilingual switcher -->
+    <ul class="switcher-lang">{% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}{% for post in posts %}{% if post.lang != page.lang %}{% assign ml=true %}{% endif %}{% if post.lang != page.lang %}
+      <li class="lang-{{ post.lang }}">
+        <a href="{{ site.baseurl }}{{ post.url }}" hreflang="{{ post.lang }}"><span title="{{ site.data.translation[page.lang][post.lang] }}">{{ site.data.translation[post.lang].lang }}</span></a>
+      </li>{% else %}
+      <li class="lang-{{ post.lang }} active">
+        <span title="Current Page Language: {{ site.data.translation[page.lang][post.lang] }}">{{ site.data.translation[post.lang].lang }}</span>
+      </li>{% endif %}{% endfor %}
+    </ul>{% endcapture %}{% if ml %}
+    {% comment %}{{ multilingual }}{% endcomment %}{% endif %}
+  </nav>

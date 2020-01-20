@@ -1,0 +1,193 @@
+////////////////////////////////////
+// Cascade - _layout-post.scss - @xtai
+////////////////////////////////////
+// layout: post
+//   x header.layout-post
+//   > main.layout-post
+//     x article
+//       x .full-width
+//       x div.switcher-content
+////////////////////////////////////
+
+header.layout-post {
+  p.category a {
+    text-decoration: none;
+  }
+  ul.tags {
+    list-style-type: none;
+    margin: 0 gutters();
+    padding: 0;
+    li {
+      display: inline;
+      a {
+        text-decoration: none;
+      }
+      &:before {
+        content: ' / ';
+      }
+      &:first-child:before {
+        content: none;
+      }
+    }
+  }
+}
+
+main.layout-post > article {
+  @include span(12);
+  .full-width {
+    margin-top: vr(1);
+    text-align: center;
+    img, video {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      @include susy-breakpoint($breakpoint-full-size, $susy) {
+        width: $breakpoint-full-size;
+      }
+    }
+  }
+  @include susy-breakpoint($breakpoint-small, $susy) {
+    .max-width-200 {
+      max-width: 200px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    .max-width-400 {
+      max-width: 400px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    .max-width-500 {
+      max-width: 500px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+  @include susy-breakpoint($breakpoint-medium, $susy) {
+    .max-width-600 {
+      max-width: 600px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    .max-width-800 {  
+      max-width: 800px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    .max-width-1000 {  
+      max-width: 1000px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+  .full-width:first-child {
+    margin-top: 0;
+  }
+  & > *:not(.full-width) {
+    margin: vr(1) gutters();
+    @include susy-breakpoint($breakpoint-text, $susy) {
+      margin: vr(1) auto;
+      max-width: $text-max-width;
+    }
+    img {
+      max-width: 100%;
+    }
+    .center {
+      text-align: center;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+}
+
+main.layout-post div.my-gallery {
+  overflow: hidden;
+  margin-bottom: 0;
+  figure {
+    display: block;
+    margin: 0.1em;
+    text-align: center;
+    @include span(12);
+    @include susy-breakpoint($breakpoint-small, $susy) {
+      @include gallery(6);
+      overflow: hidden;
+    }
+    @include susy-breakpoint($breakpoint-medium, $susy) {
+      @include gallery(4);
+      margin: 0.2em;
+    }
+  }
+  figcaption {
+    display: none;
+  }
+  figure > a {
+    display: inline-block;
+    @include susy-breakpoint($breakpoint-medium, $susy) {
+      border-width: 1px;
+      border-style: solid;
+      // padding: 1px;
+    }
+    img {
+      display: block;
+      margin: auto 0;
+      height: auto;
+      width: 100%;
+      @include susy-breakpoint($breakpoint-small, $susy) {
+        height: 150px;
+        width: auto;
+      }
+      @include susy-breakpoint($breakpoint-medium, $susy) {
+        height: 160px;
+      }
+      @include susy-breakpoint($breakpoint-text, $susy) {
+        height: 170px;
+      }
+    }
+  }
+}
+
+main.layout-post div.switcher-bar {
+  @include span(12);
+  @include typi($h4-map);
+  border-top-style: solid;
+  border-top-width: 1px;
+  font-weight: $font-weight-bold;
+  line-height: vr(2);
+  padding: vr(0.5) 0;
+  text-align: center;
+  // @include border-radius(0 0 0.4em 0.4em);
+  a {
+    text-decoration: none;
+  }
+  a.switcher {
+    display: inline-block;
+    margin: 0 auto;
+    width: span(12);
+    @include susy-breakpoint($breakpoint-small, $susy) {
+      width: span(6);
+    }
+  }
+  a.switcher.prev {
+    &:before {
+      content: "\2190 ";
+      position: relative;
+      right: 0.25rem;
+      @include transition(right $duration cubic-bezier(.2, .1, .3, 2.2) 0s);
+    }
+    &:hover:before {
+      right: 1rem;
+    }
+  }
+  a.switcher.next {
+    &:after {
+      content: " \2192";
+      position: relative;
+      left: 0.25rem;
+      @include transition(left $duration cubic-bezier(.2, .1, .3, 2.2) 0s);
+    }
+    &:hover:after {
+      left: 1rem;
+    }
+  }
+}

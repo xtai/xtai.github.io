@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic Tac Toe - Xiaoyu</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="./mine.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center" id="header">Tic-Tac-Toe</h1>
+    <p class="text-center" id="header-desc">Let's start!</p>
+    <hr>
+    <div class="game">
+      <div class="row">
+        <div class="col-xs-3 cell" id="cell-0-0">
+          <div class="option-x">X</div>
+          <div class="option-o">O</div>
+        </div>
+        <div class="col-xs-3 cell" id="cell-1-0">
+          <div class="option-x">X</div>
+          <div class="option-o">O</div>
+        </div>
+        <div class="col-xs-3 cell" id="cell-2-0">
+          <div class="option-x">X</div>
+          <div class="option-o">O</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3 cell" id="cell-0-1">
+          <div class="option-x">X</div>
+          <div class="option-o">O</div>
+        </div>
+        <div class="col-xs-3 cell" id="cell-1-1">
+          <div class="option-x">X</div>
+          <div class="option-o">O</div>
+        </div>
+        <div class="col-xs-3 cell" id="cell-2-1">
+          <div class="option-x">X</div>
+          <div class="option-o">O</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3 cell" id="cell-0-2">
+          <div class="option-x">X</div>
+          <div class="option-o">O</div>
+        </div>
+        <div class="col-xs-3 cell" id="cell-1-2">
+          <div class="option-x">X</div>
+          <div class="option-o">O</div>
+        </div>
+        <div class="col-xs-3 cell" id="cell-2-2">
+          <div class="option-x">X</div>
+          <div class="option-o">O</div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <p class="text-center" id="footer">Xiaoyu Tai</p>
+    <br>
+  </div>
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="./game.js"></script>
+  <script type="text/javascript">
+    var game = new Game();
+  </script>
+</body>
+</html>

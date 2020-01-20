@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: /sitemaps.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">{% for post in site.posts reversed %}{% if post.id contains "404" %}{% else %}
+  <url>
+    <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>{% assign versions=site.posts | where:"ref", post.ref |  %}{% for version in versions reversed %}{% if version.lang != post.lang %}
+    <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{ version.url | prepend: site.baseurl | prepend: site.url }}" />{% endif %}{% endfor %}
+    <xhtml:link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" />
+    {% if post.category %}<lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {% else %}<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>{% endif %}
+    <changefreq>weekly</changefreq>
+  </url>{% endif %}{% endfor %}
+</urlset>

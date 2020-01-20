@@ -1,0 +1,38 @@
+---
+layout: default
+---
+  <header class="layout-{{ page.layout }}">
+    <div class="header-wrapper">{% if page.category %}
+      <p class="category"><a href="{{ site.data.navigation[page.lang][page.category].url | prepend: site.baseurl }}">{{ site.data.translation[page.lang].intro[page.category] }}</a></p>{% endif %}
+      <h1>{% if page.fulltitle %}{{ page.fulltitle }}{% else %}{{ page.title }}{% endif %}</h1>
+      {% if page.subtitle %}<p>{{ page.subtitle }}</p>{% endif %}
+      {% if page.tags %}<!--p><ul class="tags">
+        {% for tag in page.tags %}<li>{{ tag }}</li>{% endfor %}
+      </ul></p-->{% endif %}
+    </div>
+  </header>
+{% include nav.html %}
+  <main class="layout-{{ page.layout }}" id="content">
+    <article>
+
+<!-- post content -->
+{{ content }}
+<!-- end post content -->
+
+      {% capture hide %}{% if page.category %}
+        {% assign prev = nil %}{% assign next = nil %}
+        {% assign posts = site.posts | where:"lang", page.lang | where:"category", page.category %}
+        {% for post in posts %}
+          {% if next == "possible" %}{% assign next = post %}{% break %}{% endif %}
+          {% if post.ref != page.ref %}{% assign prev = post %}
+          {% else %}{% assign next = "possible" %}
+          {% endif %}
+        {% endfor %}
+        {% if next == "possible" %}{% assign next = nil %}{% endif %}
+      {% endif %}{% endcapture %}{% if prev or next %}
+      <div class="full-width switcher-bar">{% if prev and prev.hide == null %}
+        <a href="{{ prev.url | prepend: site.baseurl }}" class="switcher prev">{{ prev.title }}</a>{% endif %}{% if next and next.hide == null %}
+        <a href="{{ next.url | prepend: site.baseurl }}" class="switcher next">{{ next.title }}</a>{% endif %}
+      </div>{% endif %}
+    </article>
+  </main>

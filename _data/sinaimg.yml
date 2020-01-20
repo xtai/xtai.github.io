@@ -1,0 +1,28 @@
+# this file is not in use
+# sinaimg hosting patterns
+# img link = server + size + pid (hash) + format
+
+server:
+  - https://ww1.sinaimg.cn/
+  - https://ww2.sinaimg.cn/
+  - https://ww3.sinaimg.cn/
+  - https://ww4.sinaimg.cn/
+  - https://wx1.sinaimg.cn/
+  - https://wx2.sinaimg.cn/
+  - https://wx3.sinaimg.cn/
+  - https://wx4.sinaimg.cn/
+
+size:
+  s80:   square/    #   80 - square
+  s120:  thumbnail/ #  120 - max width
+  s180:  thumb180/  #  180 - square
+  s200:  small/     #  200 - max width
+  s440:  bmiddle/   #  440 - min width
+  s600:  mw600/     #  600 - min width
+  s690:  mw690/     #  690 - min width
+  s720:  mw720/     #  720 - min width
+  # s720:  wap720/  #  720 - min width
+  s1024: mw1024/    # 1024 - min width
+  s2048: large/     # 2048 - max width/height
+
+format: .jpg

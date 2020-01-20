@@ -1,0 +1,23 @@
+permalink: /:categories/:year/:title/
+
+baseurl: 
+
+sass:
+  style: compressed
+
+exclude:
+  - node_modules
+  - gulpfile.js
+  - package.json
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: post
+  -
+    scope:
+      path: ""
+    values:
+      theme: light

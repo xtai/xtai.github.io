@@ -1,0 +1,65 @@
+////////////////////////////////////
+// Cascade - _main.scss - @xtai
+@charset "UTF-8";
+////////////////////////////////////
+// import toolbox
+@import 'toolbox/susy';
+@import 'toolbox/breakpoint';
+@import 'toolbox/typi/typi';
+////////////////////////////////////
+// susy settings
+$susy: (
+  columns: 12,
+  gutters: 0.5,
+  global-box-sizing: border-box
+);
+@include border-box-sizing;
+////////////////////////////////////
+// variables
+$breakpoint-small:      600px; // 2 rows mobile-horizontal tablet-all
+$breakpoint-medium:    1200px; // 3 rows mbp13 mba13
+$breakpoint-large:     1400px; // 3 rows mbp15
+$breakpoint-text:      1045px; // text block breakpoint
+$text-max-width:       1000px; // text block max-width
+$breakpoint-full-size: 2048px; // full-width image
+$duration: 100ms;
+$duration-long: 200ms;
+$font-weight-bold: 300;
+////////////////////////////////////
+// mixins
+@import 'mixins';
+// typi and font setting
+@import 'fonts';
+// color and theme
+@import 'color';
+@import 'theme';
+////////////////////////////////////
+// site styles
+// > generic
+// x specific
+////////////////////////////////////
+@import 'global';
+//   > global settings
+//   > body
+//     > header 
+//     > nav
+//     > main
+//     > footer
+////////////////////////////////////
+@import 'layout-list';
+// layout: list
+//   x header.layout-list
+//   x main.layout-list
+//     x ul.covers
+////////////////////////////////////
+@import 'layout-post';
+// layout: post
+//   x header.layout-post
+//   > main.layout-post
+//     x article
+//       x .full-width
+//       x div.switcher-content
+////////////////////////////////////
+// pace load indicator
+@import 'pace';
+////////////////////////////////////

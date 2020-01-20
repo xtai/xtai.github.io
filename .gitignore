@@ -1,0 +1,18 @@
+# Mac
+.DS_Store
+
+# Jekyll
+_site
+.sass-cache
+.jekyll-metadata
+
+# Node
+node_modules
+pids
+*.pid
+*.seed
+*.pid.lock
+.npm
+logs
+*.log
+npm-debug.log*

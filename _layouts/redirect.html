@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>{% capture hide %}
+    {% for post in site.posts %}
+      {% if post.ref == page.redirect_to and post.lang == page.redirect_lang %}
+        {% assign redirect = post %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% if redirect %}
+      {% assign url = redirect.url | prepend: site.baseurl %}
+      {% assign title = redirect.title %}
+    {% else %}
+      {% assign url = site.baseurl %}
+      {% assign title = "Sean Tai" %}
+    {% endif %}
+    {% endcapture %}<meta http-equiv="refresh" content="0; url={{ url }}">
+    <title>Redirecting to {{ title }}</title>
+  </head>
+</html>
+<body>
+  <p>Redirecting to {{ title }}.</p>
+</body>

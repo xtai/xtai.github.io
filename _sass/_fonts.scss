@@ -1,0 +1,36 @@
+////////////////////////////////////
+// Cascade - _fonts.scss - @xtai
+////////////////////////////////////
+//   > font stack
+//   > typi settings
+////////////////////////////////////
+
+$font-stack: "Raleway", "Helvetica Neue", Helvetica, "PingFang SC", "苹方";
+$font-stack-fallback: Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑",
+                      Heiti, "黑体", SimSun, "宋体", sans-serif;
+$breakpoints: (
+  small:  $breakpoint-small,
+  medium: $breakpoint-medium,
+  large:  $breakpoint-large );
+$typi: (
+  null:  (18px, 1.5),
+  small:  20px,
+  medium: 24px,
+  large:  24px );
+$h1-map: (null: (1.618em, 1.5), small: 2em);
+$h2-map: (null: 1.414em, small: 1.618em);
+$h3-map: (null:   1.2em, small: 1.414em);
+$h4-map: (null: 1.095em, small:   1.2em);
+$h5-map: (null: 1.046em, small: 1.095em);
+$h6-map: (null: 1.046em, small: 1.046em);
+
+html {
+  font-family: $font-stack, $font-stack-fallback;
+  @include typi-base();
+}
+h1 { @include typi($h1-map); font-weight: $font-weight-bold; }
+h2 { @include typi($h2-map); font-weight: $font-weight-bold; }
+h3 { @include typi($h3-map); font-weight: $font-weight-bold; }
+h4 { @include typi($h4-map); font-weight: $font-weight-bold; }
+h5 { @include typi($h5-map); font-weight: $font-weight-bold; }
+h6 { @include typi($h6-map); font-weight: $font-weight-bold; }
